@@ -213,27 +213,290 @@ li {
 =================================*/
 
 .background {
-  background-image: url(assets/img/bg.jpg);
-  background-size: cover;
-  height: 600px;
-  border: 1px solid #333;
-  margin-top: 30px;
+  padding: 40px 0 0 0;
 }
 
+.background .wrapper {
+  width: 22%;
+  height: 85vh;
+  border: 2px solid rgb(0,0,0);
+  position: relative;
+  background: url(/assets/img/bg.jpg);
+  background-repeat:  no-repeat;
+  overflow: hidden;
+}
 h1.logo a {
   display: block;
   margin: 20px auto;
-  width: 32%;
+  width: 50%;
 }
 
-h2.boring-sandwich-title {
-  text-align: center;
+figure{
+  position: absolute;
+  width: 30%;
+}
+
+.table-img{
+  animation: table-img 1s ease;
+  top: 88%;
+  width: 100%;
+}
+
+@keyframes table-img {
+  0% { opacity: 0; }
+  100% { opacity: 100%; }
+}
+
+.plate{
+  animation: plate 6s ease-in-out 1.8s;
+  top: 90%;
+  transform: translateX(-125%);
+  width: 80%;
+}
+
+@keyframes plate {
+  0% { transform: translateX(-125%); }
+  30% { transform: translateX(0); }
+  70% { transform: translateX(0); }
+  100% { transform: translateX(-125%); }
+}
+
+h2,h3,h4,h5 {
+  position: absolute;
+  top: 26%;
+  left: 23%;
+  color: rgb(251,0,0);
   font-family: none;
   font-size: 30px;
-  color: #cf1212;
-  width: 40%;
-  margin: 25px auto;
+  text-align: center;
+  text-transform: capitalize;
+  width: 54%;
 }
+
+.boring-sandwich-title {
+  animation: boring-sandwich-title 6.5s cubic-bezier(0.36, 1.18, 0.99, 1) 2.9s;
+  transform: translateX(-147%);
+}
+
+@keyframes boring-sandwich-title {
+  0% { transform: translateX(-147%); }
+  15% { transform: translateX(0); }
+  70% { transform: translateX(0); }
+  100% { transform: translateX(-147%); }
+}
+
+.sad-person {
+  top: 47%;
+  right: -6px;
+  animation: sad-person 6.5s cubic-bezier(0.36, 1.18, 0.99, 1) 2.7s;
+  transform: translateX(142%);
+  width: 69%;
+}
+
+@keyframes sad-person {
+  0% { transform: translateX(142%); }
+  15% { transform: translateX(0); }
+  70% { transform: translateX(0); }
+  100% { transform: translateX(142%); }
+}
+
+.sandwich-1 {
+  position: absolute;
+  z-index: 6;
+  top: 57%;
+  animation: sandwich-1 21s ease 8s;
+  height: 200px;
+  transform: translateX(-63%);
+  width: 100%;
+}
+
+@keyframes sandwich-1 {
+  0% { transform: translateX(-63%); }
+  10% { transform: translateX(0%); }
+  95% { transform: translateX(0%); }
+  100% { transform: translateX(-63%); }
+}
+
+.bread-plate {
+  top: 90%;
+  right: 38%;
+  width: 75%;
+}
+.sandwich-2 {
+  top: 91%;
+  right: 52%;
+  width: 51%;
+}
+.sandwich-3 {
+  z-index: 2;
+  top: 88%;
+  right: 52%;
+  animation: floatSandwich 3.3s ease 14s forwards;
+  transform: translateY(0);
+  width: 51%;
+}
+@keyframes floatSandwich {
+  0% { transform: translateY(0); }
+  70% { transform: translateY(-50px); }
+  100% { transform: translateY(-15px); }
+}
+
+.mayo {
+  top: 90%;
+  right: 52%;
+  opacity: 1;
+  animation: mayo 7s ease 12s;
+  width: 51%;
+}
+
+@keyframes mayo {
+  0% { opacity: 0; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.knife {
+  z-index: 3;
+  top: 88%;
+  right: 38%;
+  opacity: 0;
+  animation: knife 1s ease-in-out 16s; 
+  transform: translateX(-160%) rotate(301deg);
+  width: 20%;
+}
+
+@keyframes knife {
+  0% {
+    transform: translateX(-160%) rotate(301deg);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(0) rotate(301deg);
+  }
+  100% {
+    width: 25%;
+    transform: translateX(-160%) rotate(301deg);
+    opacity: 0;
+  }
+}
+
+.happy-sandwich-title {
+  animation: happy-sandwich-title 6s cubic-bezier(0.36, 1.18, 0.99, 1) 17s;
+  transform: translateX(-170%);
+}
+
+@keyframes happy-sandwich-title {
+  0% { transform: translateX(-170%); }
+  10% { transform: translateX(0); }
+  70% { transform: translateX(0); }
+  100% { transform: translateX(-170%); }
+}
+
+.happy-person {
+  z-index: 1;
+  top: 47%;
+  right: -10px;
+  animation: happy-person 6s cubic-bezier(0.36, 1.18, 0.99, 1) 17s;
+  transform: translateX(142%);
+  width: 69%;
+}
+
+@keyframes happy-person {
+  0% { transform: translateX(142%); } 
+  10% { transform: translateX(0); }
+  70% { transform: translateX(0); }
+  100% { transform: translateX(142%); }
+}
+
+.chef {
+  top: 47%;
+  right: -10px;
+  animation: happy-person 7s cubic-bezier(0.36, 1.18, 0.99, 1) 23s;
+  transform: translateX(142%);
+  width: 69%;
+}
+
+.fun-food-heading { 
+  left: 1%; 
+}
+
+.fun-food-heading,.veg-mayo-heading {
+  animation: happy-sandwich-title 7s cubic-bezier(0.36, 1.18, 0.99, 1) 23s;
+  text-align: center;
+  transform: translateX(-170%);
+  width: 100%;
+}
+
+.veg-mayo-heading {
+  top: 32%;
+  left: 1%;
+}
+
+.mayo-bottle-heading {
+  animation: mayo-bottle-heading 7s cubic-bezier(0.36, 1.18, 0.99, 1) 30s forwards;
+  left: 15%;
+  transform: translateX(-170%);
+  width: 68%;
+}
+
+@keyframes mayo-bottle-heading {
+  0% { transform: translateX(-170%); }
+  10% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+.fun-food-bottle {
+  top: 71%;
+  right: 33%;
+  animation: fun-food-bottle 7s cubic-bezier(0.36, 1.18, 0.99, 1) 30s forwards;
+  transform: translateX(220%);
+  width: 35%;
+}
+
+@keyframes fun-food-bottle {
+  0% { transform: translateX(220%); } 
+  10% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+.hat {
+  width: 42%;
+  z-index: 3;
+  top: 59%;
+  right: 24%;
+  transform: translate(-192%,-93%);
+  animation: hat 4s cubic-bezier(0.36, 1.18, 0.99, 1) 32s forwards;
+}
+
+@keyframes hat {
+  0% { transform: translate(-192%,-93%); } 
+  10% { transform: translate(0,-80%); }
+  100% { transform: translate(0); }
+}
+
+.get-recipe {
+  position: absolute;
+  top: 45%;
+  right: 30%;
+  transform: translate(-192%,-93%);
+  animation: btn 4s cubic-bezier(0.22, 0.61, 0.36, 1) 35s forwards;
+}
+
+@keyframes btn {
+  0% { transform: translate(-192%,-170%); } 
+  10% { transform: translate(0); }
+  100% { transform: translate(0); }
+}
+
+.get-recipe a {
+  padding: 8px 20px;
+  border-radius: 8px;
+  background: rgb(58,46,137);
+  color: rgb(255,255,255);
+  font-size: 17px;
+  text-transform: capitalize;
+}
+
 
 /*=================================
   main styling ends here
