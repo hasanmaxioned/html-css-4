@@ -221,7 +221,7 @@ li {
   height: 85vh;
   border: 2px solid rgb(0,0,0);
   position: relative;
-  background: url(/assets/img/bg.jpg);
+  background: url(../img/bg.jpg);
   background-repeat:  no-repeat;
   overflow: hidden;
 }
